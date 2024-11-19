@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Ecommerce Final</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+          </div>
+          <p class="header__alert-news">
+          </p>
+          <a href="login-register.html" class="header__top-action">
+            <i class="bi bi-box-arrow-in-right"></i>
+          </a>
+        </div>
+      </div>
+    
+      <nav class="nav container">
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="./assets/img/logo.svg" alt="">
+            </a>
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link active-link">Inicio
+                <i class="bi bi-house-fill"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Tienda
+                <i class="bi bi-shop"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link">Mi Cuenta
+                <i class="bi bi-person-circle"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Iniciar Sesión
+                <i class="bi bi-person-lines-fill"></i>
+              </a>
+            </li>
+          </ul>
+          <div class="header__search">
+            <input
+              type="text"
+              placeholder="Buscar productos..."
+              class="form__input"
+            />
+            <button class="search__btn">
+              <img src="assets/img/search.png" alt="ícono de búsqueda" />
+            </button>
+          </div>
+        </div>
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn" title="Lista de Deseos">
+            <img src="assets/img/icon-heart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <a href="cart.html" class="header__action-btn" title="Carrito">
+            <img src="assets/img/icon-cart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="./assets/img/menu-burger.svg" alt="">
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!--=============== MIGA DE PAN ===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Inicio</a></li>
+          <li><span class="breadcrumb__link">></span></li>
+          <li><span class="breadcrumb__link">Cuenta</span></li>
+        </ul>
+      </section>
+    
+      <!--=============== CUENTAS ===============-->
+      <section class="accounts section--lg" style="padding: 40px 0;">
+        <div class="accounts__container container grid" style="display: grid; grid-template-columns: 250px 1fr; gap: 20px;">
+          <div class="account__tabs" style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <p class="account__tab active-tab" data-target="#dashboard" style="margin-bottom: 15px; font-size: 18px; cursor: pointer;">
+              <i class="fi fi-rs-settings-sliders" style="margin-right: 8px;"></i> Panel de control
+            </p>
+            <p class="account__tab" data-target="#orders" style="margin-bottom: 15px; font-size: 18px; cursor: pointer;">
+              <i class="fi fi-rs-shopping-bag" style="margin-right: 8px;"></i> Pedidos
+            </p>
+            <p class="account__tab" data-target="#update-profile" style="margin-bottom: 15px; font-size: 18px; cursor: pointer;">
+              <i class="fi fi-rs-user" style="margin-right: 8px;"></i> Actualizar perfil
+            </p>
+            <p class="account__tab" data-target="#address" style="margin-bottom: 15px; font-size: 18px; cursor: pointer;">
+              <i class="fi fi-rs-marker" style="margin-right: 8px;"></i> Mi dirección
+            </p>
+            <p class="account__tab" data-target="#change-password" style="margin-bottom: 15px; font-size: 18px; cursor: pointer;">
+              <i class="fi fi-rs-settings-sliders" style="margin-right: 8px;"></i> Cambiar contraseña
+            </p>
+            <p class="account__tab" style="font-size: 18px; cursor: pointer;">
+              <i class="fi fi-rs-exit" style="margin-right: 8px;"></i> Cerrar sesión
+            </p>
+          </div>
+          <div class="tabs__content" style="padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="tab__content active-tab" content id="dashboard">
+              <h3 class="tab__header" style="font-size: 24px; margin-bottom: 20px;">Hola</h3>
+              <div class="tab__body">
+                <p class="tab__description" style="font-size: 16px; line-height: 1.5;">
+                  Desde el panel de control de tu cuenta, puedes ver fácilmente tu pedido reciente, gestionar tus direcciones de envío y facturación,
+                  y editar tu contraseña y detalles de cuenta.
+                </p>
+              </div>
+            </div>
+            <div class="tab__content" content id="orders">
+              <h3 class="tab__header" style="font-size: 24px; margin-bottom: 20px;">Tus pedidos</h3>
+              <div class="tab__body">
+                <table class="placed__order-table" style="width: 100%; border-collapse: collapse;">
+                  <thead>
+                    <tr>
+                      <th style="padding: 10px; text-align: left; background-color: #f0f0f0;">Pedidos</th>
+                      <th style="padding: 10px; text-align: left; background-color: #f0f0f0;">Fecha</th>
+                      <th style="padding: 10px; text-align: left; background-color: #f0f0f0;">Estado</th>
+                      <th style="padding: 10px; text-align: left; background-color: #f0f0f0;">Total</th>
+                      <th style="padding: 10px; text-align: left; background-color: #f0f0f0;">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="padding: 10px;">#1357</td>
+                      <td style="padding: 10px;">19 de marzo, 2022</td>
+                      <td style="padding: 10px;">Procesando</td>
+                      <td style="padding: 10px;">$125.000</td>
+                      <td style="padding: 10px;"><a href="#" class="view__order" style="color: #007bff; text-decoration: none;">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px;">#2468</td>
+                      <td style="padding: 10px;">29 de junio, 2022</td>
+                      <td style="padding: 10px;">Completado</td>
+                      <td style="padding: 10px;">$364.000</td>
+                      <td style="padding: 10px;"><a href="#" class="view__order" style="color: #007bff; text-decoration: none;">Ver</a></td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px;">#2366</td>
+                      <td style="padding: 10px;">2 de agosto, 2022</td>
+                      <td style="padding: 10px;">Completado</td>
+                      <td style="padding: 10px;">$280.000</td>
+                      <td style="padding: 10px;"><a href="#" class="view__order" style="color: #007bff; text-decoration: none;">Ver</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab__content" content id="update-profile">
+              <h3 class="tab__header" style="font-size: 24px; margin-bottom: 20px;">Actualizar perfil</h3>
+              <div class="tab__body">
+                <form class="form grid" style="display: grid; grid-gap: 15px;">
+                  <input type="text" placeholder="Nombre de usuario" class="form__input" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" />
+                  <div class="form__btn">
+                    <button class="btn btn--md" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 4px;">Guardar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="tab__content" content id="address">
+              <h3 class="tab__header" style="font-size: 24px; margin-bottom: 20px;">Dirección de envío</h3>
+              <div class="tab__body">
+                <address class="address" style="font-style: normal; font-size: 16px;">
+                  Carrera Septima<br />
+                  Numero 23 al oeste del sur, <br />
+                  
+                </address>
+                <p class="city" style="font-size: 16px; font-weight: bold;">Bogota DC</p>
+                <a href="#" class="edit" style="color: #007bff; text-decoration: none;">Editar</a>
+              </div>
+            </div>
+            <div class="tab__content" content id="change-password">
+              <h3 class="tab__header" style="font-size: 24px; margin-bottom: 20px;">Cambiar contraseña</h3>
+              <div class="tab__body">
+                <form class="form grid" style="display: grid; grid-gap: 15px;">
+                  <input type="password" placeholder="Contraseña actual" class="form__input" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" />
+                  <input type="password" placeholder="Nueva contraseña" class="form__input" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" />
+                  <input type="password" placeholder="Confirmar contraseña" class="form__input" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;" />
+                  <div class="form__btn">
+                    <button class="btn btn--md" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 4px;">Guardar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+      <!--=============== BOLETÍN ===============-->
+      <section class="newsletter section">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            
+          </h3> 
+        </div>
+      </section>
+    </main>
+    
+
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <h4 class="footer__subtitle">Contacto</h4>
+          <p class="footer__description">
+            <span>Dirección:</span> Calle 13, Carrera 32, Bogotá, Colombia
+          </p>
+          <p class="footer__description">
+            <span>Teléfono:</span> +57 1 222 365 / (+57) 320 123 4567
+          </p>
+          <p class="footer__description">
+            <span>Horario:</span> 10:00 - 18:00, Lun - Sáb
+          </p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Sígueme</h4>
+            <div class="footer__links flex">
+              <a href="#">
+                <img
+                  src="./assets/img/icon-facebook.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-twitter.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-instagram.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-pinterest.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-youtube.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Dirección</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Sobre Nosotros</a></li>
+            <li><a href="#" class="footer__link">Información de Envío</a></li>
+            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Contáctanos</a></li>
+            <li><a href="#" class="footer__link">Centro de Soporte</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Mi Cuenta</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Iniciar Sesión</a></li>
+            <li><a href="#" class="footer__link">Ver Carrito</a></li>
+            <li><a href="#" class="footer__link">Mi Lista de Deseos</a></li>
+            <li><a href="#" class="footer__link">Rastrear mi Pedido</a></li>
+            <li><a href="#" class="footer__link">Ayuda</a></li>
+            <li><a href="#" class="footer__link">Pedido</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Medios de Pago Seguras</h3>
+          <img
+            src="./assets/img/payment-method.png"
+            alt=""
+            class="payment__img"
+          />
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2024 Todos los derechos reservados</p>
+        <span class="designer">Creado por Daniel Felipe Soto</span>
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

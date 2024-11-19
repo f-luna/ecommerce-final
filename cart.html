@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Ecommerce Final</title>
+</head>
+  <body>
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+          </div>
+          <p class="header__alert-news">
+          </p>
+          <a href="login-register.html" class="header__top-action">
+            <i class="bi bi-box-arrow-in-right"></i>
+          </a>
+        </div>
+      </div>
+  
+      <nav class="nav container">
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="./assets/img/logo.svg" alt="">
+            </a>
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link active-link">Inicio
+                <i class="bi bi-house-fill"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link">Tienda
+                <i class="bi bi-shop"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link">Mi Cuenta
+                <i class="bi bi-person-circle"></i>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Iniciar Sesión
+                <i class="bi bi-person-lines-fill"></i>
+              </a>
+            </li>
+          </ul>
+          <div class="header__search">
+            <input type="text" placeholder="Buscar productos..." class="form__input" />
+            <button class="search__btn">
+              <img src="assets/img/search.png" alt="ícono de búsqueda" />
+            </button>
+          </div>
+        </div>
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn" title="Lista de Deseos">
+            <img src="assets/img/icon-heart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <a href="cart.html" class="header__action-btn" title="Carrito">
+            <img src="assets/img/icon-cart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="./assets/img/menu-burger.svg" alt="">
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Inicio</a></li>
+          <li><span class="breadcrumb__link"></span>></li>
+          <li><span class="breadcrumb__link">Tienda</span></li>
+          <li><span class="breadcrumb__link"></span>></li>
+          <li><span class="breadcrumb__link">Carrito</span></li>
+        </ul>
+      </section>
+    
+      <section class="cart section--lg container">
+        <div class="table__container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="./assets//img/image13.png"
+                    alt=""
+                    class="table__img"
+                  />
+                </td>
+                <td>
+                  <h3 class="table__title">
+                    Camisa azul a rayas
+                  </h3>
+                  <p class="table__description">
+
+                  </p>
+                </td>
+                <td>
+                  <span class="table__price">$20.000</span>
+                </td>
+                <td><input type="number" value="3" class="quantity" /></td>
+                <td><span class="subtotal">$60.000</span></td>
+                <td><i class="fi fi-rs-trash table__trash"></i></td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="./assets//img/image19.png"
+                    alt=""
+                    class="table__img"
+                  />
+                </td>
+                <td>
+                  <h3 class="table__title">
+                    Chaqueta negra
+                  </h3>
+                  <p class="table__description">
+                  </p>
+                </td>
+                <td>
+                  <span class="table__price">$65.000</span>
+                </td>
+                <td><input type="number" value="1" class="quantity" /></td>
+                <td><span class="subtotal">$65.000</span></td>
+                <td><i class="fi fi-rs-trash table__trash"></i></td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="./assets//img/image11.png"
+                    alt=""
+                    class="table__img"
+                  />
+                </td>
+                <td>
+                  <h3 class="table__title">
+                    Camisa verde
+                  </h3>
+                  <p class="table__description">
+                  </p>
+                </td>
+                <td>
+                  <span class="table__price">$45.000</span>
+                </td>
+                <td><input type="number" value="1" class="quantity" /></td>
+                <td><span class="subtotal">$45.000</span></td>
+                <td><i class="fi fi-rs-trash table__trash"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="divider">
+        </div>
+    
+        <div class="cart__group grid">
+          <div>
+            <div class="cart__shippinp">
+              <h3 class="section__title">Calcular Envío</h3>
+              <form action="" class="form grid">
+                <input
+                  type="text"
+                  class="form__input"
+                  placeholder="Estado / País"
+                />
+                <div class="form__group grid">
+                  <input type="text" class="form__input" placeholder="Ciudad" />
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Código Postal"
+                  />
+                </div>
+                <div class="form__btn">
+                  <button class="btn flex btn--sm">
+                    <i class="fi-rs-shuffle"></i> Actualizar
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="cart__coupon">
+              <h3 class="section__title">Aplicar Cupón</h3>
+              <form action="" class="coupon__form form grid">
+                <div class="form__group grid">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Introduce Tu Cupón"
+                  />
+                  <div class="form__btn">
+                    <button class="btn flex btn--sm">
+                      <i class="fi-rs-label"></i> Aplicar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+    
+          <div class="cart__total">
+            <h3 class="section__title">Totales del Carrito</h3>
+            <table class="cart__total-table">
+              <tr>
+                <td><span class="cart__total-title">Subtotal del Carrito</span></td>
+                <td><span class="cart__total-price">$240.00</span></td>
+              </tr>
+              <tr>
+                <td><span class="cart__total-title">Envío</span></td>
+                <td><span class="cart__total-price">$10.00</span></td>
+              </tr>
+              <tr>
+                <td><span class="cart__total-title">Total</span></td>
+                <td><span class="cart__total-price">$250.00</span></td>
+              </tr>
+            </table>
+            <a href="checkout.html" class="btn flex btn--md">
+              <i class="fi fi-rs-box-alt"></i> Proceder al Pago
+            </a>
+          </div>
+        </div>
+      </section>
+    
+      <section class="newsletter section">
+        <div class="newsletter__container container grid"></div>
+      </section>
+    </main>
+    
+
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <h4 class="footer__subtitle">Contacto</h4>
+          <p class="footer__description">
+            <span>Dirección:</span> Calle 13, Carrera 32, Bogotá, Colombia
+          </p>
+          <p class="footer__description">
+            <span>Teléfono:</span> +57 1 222 365 / (+57) 320 123 4567
+          </p>
+          <p class="footer__description">
+            <span>Horario:</span> 10:00 - 18:00, Lun - Sáb
+          </p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Sígueme</h4>
+            <div class="footer__links flex">
+              <a href="#">
+                <img
+                  src="./assets/img/icon-facebook.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-twitter.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-instagram.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-pinterest.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-youtube.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Dirección</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Sobre Nosotros</a></li>
+            <li><a href="#" class="footer__link">Información de Envío</a></li>
+            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
+            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+            <li><a href="#" class="footer__link">Contáctanos</a></li>
+            <li><a href="#" class="footer__link">Centro de Soporte</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Mi Cuenta</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Iniciar Sesión</a></li>
+            <li><a href="#" class="footer__link">Ver Carrito</a></li>
+            <li><a href="#" class="footer__link">Mi Lista de Deseos</a></li>
+            <li><a href="#" class="footer__link">Rastrear mi Pedido</a></li>
+            <li><a href="#" class="footer__link">Ayuda</a></li>
+            <li><a href="#" class="footer__link">Pedido</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Medios de Pago Seguras</h3>
+          <img
+            src="./assets/img/payment-method.png"
+            alt=""
+            class="payment__img"
+          />
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2024 Todos los derechos reservados</p>
+        <span class="designer">Creado por Daniel Felipe Soto</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
